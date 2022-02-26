@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Article preview component]()
+- Live Site URL: [Article preview component](https://leslief10.github.io/article-preview-component/)
 
 ## My process
 
