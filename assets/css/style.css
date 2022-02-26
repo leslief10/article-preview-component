@@ -1,0 +1,244 @@
+:root {
+  --primary-color: #48556A;
+  --secondary-color: #6D7F97;
+  --tertiary-color: #9EAFC2;
+  --light-color: #ECF2F8;
+  --main-font: 'Manrope', sans-serif;
+}
+
+html {
+  font-family: var(--main-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+main, article, .container, .article-container, .article-writer-info, .article-writer-info span, .share-icon-container, .share-info-container, .social-icons, .share-icon-container-white {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+
+main {
+  padding: 74px 24px 81px;
+}
+
+main, article {
+  min-width: 375px;
+  height: 100vh;
+  background: var(--light-color);
+}
+
+.container {
+  width: 327px;
+  height: 504px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+}
+
+.main-article-image {
+  width: 327px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.article-container {
+  position: relative;
+  margin-top: 40px;
+  padding: 0 32px;
+}
+
+.article-title {
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  color: var(--primary-color);
+}
+
+.article-paragraph {
+  margin-bottom: 30px;
+  padding-right: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: var(--secondary-color);
+}
+
+.article-writer-info, .share-info-container, .social-icons {
+  flex-direction: row;
+}
+
+.article-writer-info {
+  padding: 4px 0 20px;
+  gap: 17px;
+}
+
+.writer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.article-writer-info span {
+  width: 157px;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.article-writer-info span p:nth-child(1) {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.article-writer-info span p:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.share-icon-button, .share-icon-secondary-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+}
+
+.share-icon-button {
+  background: var(--secondary-color);
+}
+
+.light-background {
+  background: var(--light-color);
+}
+
+.share-icon-button:hover {
+  cursor: pointer;
+}
+
+.white-icon, .share-icon-white {
+  filter: brightness(0) invert(1);
+}
+
+.share-icon {
+  filter: none;
+}
+
+.share-info-container {
+  position: absolute;
+  bottom: 9px;
+  width: 327px;
+  height: 64px;
+  padding: 0 32px;
+  background: var(--primary-color);
+  border-radius: 0 0 10px 10px;
+  gap: 20px;
+  visibility: visible;
+}
+
+.hide-container {
+  visibility: hidden;
+}
+
+.share-info-container p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  color: var(--tertiary-color);
+}
+.social-icons {
+  width: 129px;
+  justify-content: flex-start;
+  gap: 17px;
+}
+
+.social-icons img {
+  cursor: pointer;
+}
+
+.share-icon-secondary-button {
+  background: var(--secondary-color);
+}
+
+.share-icon-secondary-button:hover {
+  cursor: pointer;
+}
+
+.attribution, .attribution a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.attribution a:hover {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+@media only screen and (min-width: 810px) {
+  .container {
+    width: 730px;
+    height: 280px;
+    flex-direction: row;
+  }
+
+  .main-article-image {
+    width: 285px;
+    height: 280px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .article-container {
+    padding: 34px 41px 28px;
+    margin-top: 0;
+  }
+
+  .article-title {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  .article-paragraph {
+    margin-bottom: 20px;
+  }
+
+  .article-writer-info {
+    width: 366px;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .share-icon-button {
+    margin-left: 102px;
+  }
+
+  .share-info-container {
+    bottom: 93px;
+    right: -66px;
+    width: 248px;
+    height: 55px;
+    padding: 0 36px 0 38px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+  }
+
+  .share-info-container::after {
+    content: '';
+    position: absolute;
+    left: 45%;
+    transform: rotate(45deg);
+    bottom: -12px;
+    width: 24px;
+    height: 24px;
+    background: var(--primary-color);
+  }
+
+  .share-icon-secondary-button {
+    display: none;
+  }
+}
